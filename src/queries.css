@@ -1,0 +1,82 @@
+@media (max-width: 117em) {
+  .project-container {
+    max-width: 45rem;
+    max-height: 70rem;
+  }
+  .projects {
+    margin: 0 20rem;
+    grid-template-columns: repeat(auto-fill, minmax(40rem, 45rem));
+  }
+}
+@media (max-width: 92.5em) {
+  html {
+    font-size: 55%;
+  }
+  h1,
+  h2 {
+    font-weight: 600;
+    font-size: 5.2rem;
+    padding-bottom: 3.4rem;
+  }
+  .about-description {
+    font-size: 3rem;
+  }
+  .header {
+    padding-left: 14rem;
+    padding-right: 10rem;
+    font-size: 2.4rem;
+  }
+  .logo-text {
+    margin-right: 16rem;
+  }
+  .about {
+    margin-left: 14rem;
+  }
+  .section-projects {
+    margin-bottom: 20rem;
+  }
+  .projects {
+    margin: 0 24rem;
+  }
+  .project-container {
+    max-width: 45rem;
+    max-height: 70rem;
+  }
+  .projects {
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 45rem));
+  }
+  .footer {
+    margin: 0 18rem 8rem 18rem;
+  }
+  .footer p {
+    font-size: 3rem;
+  }
+  .footer p:first-child {
+    font-size: 3.2rem;
+    margin-right: 10rem;
+  }
+  .technologie {
+    margin-left: 14rem;
+  }
+  .section-technologie-title {
+    margin-bottom: 13.3rem;
+  }
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (max-width: 68em) {
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .media-links-footer {
+    position: unset;
+    grid-column: 4 / 2;
+  }
+  .footer p:first-child {
+    grid-column: span 2;
+  }
+}
