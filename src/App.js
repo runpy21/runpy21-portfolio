@@ -65,66 +65,101 @@ export default function App() {
 }
 
 function NavBar() {
-  return (
-    <header className="header">
-      <Logo />
-      <nav className="nav-bar">
-        <NavLinks></NavLinks>
-      </nav>
-      <MediaLinks></MediaLinks>
-    </header>
-  );
-}
+  const [openNav, setNavIsOpen] = useState(false);
 
-function Logo() {
-  return (
-    <div className="logo">
-      <span className="logo-text">runpy21</span>
-    </div>
-  );
-}
-
-function NavLinks() {
+  useEffect(() => {
+    if (openNav) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [openNav]);
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
-    console.log(section);
+
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+  function handleOpenNav() {
+    setNavIsOpen(!openNav);
+  }
 
   return (
-    <nav className="main-nav">
-      <ul className="main-nav-list">
-        <li>
-          <a
-            className="nav-link"
-            href="#section--1"
-            onClick={() => scrollToSection("#section--1")}
-          >
-            Projects
-          </a>
-        </li>
-        <li>
-          <a
-            className="nav-link"
-            href="#section--2"
-            onClick={() => scrollToSection("#section--2")}
-          >
-            Technologies
-          </a>
-        </li>
-        <li>
-          <a
-            className="nav-link"
-            href="#section--3"
-            onClick={() => scrollToSection("#section--3")}
-          >
-            About me
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <section className="section-header">
+      <header className="header">
+        <h1 className="main-logo">
+          <a href="/">runpy21</a>
+        </h1>
+
+        <div className={`${openNav ? "nav-mobile" : "nav"}`}>
+          <ul className="nav-links">
+            <li className="nav-item" onClick={handleOpenNav}>
+              <a
+                className="nav-link"
+                href="#section--1"
+                onClick={() => scrollToSection("#section--1")}
+              >
+                Projects
+              </a>
+            </li>
+            <li className="nav-item" onClick={handleOpenNav}>
+              <a
+                className="nav-link"
+                href="#section--2"
+                onClick={() => scrollToSection("#section--2")}
+              >
+                Technologies
+              </a>
+            </li>
+            <li className="nav-item" onClick={handleOpenNav}>
+              <a
+                className="nav-link"
+                href="#section--3"
+                onClick={() => scrollToSection("#section--3")}
+              >
+                About me
+              </a>
+            </li>
+            {openNav ? (
+              <div className="links">
+                <MediaLinks openNav={openNav}></MediaLinks>
+              </div>
+            ) : (
+              ""
+            )}
+          </ul>
+        </div>
+        {openNav ? (
+          ""
+        ) : (
+          <div className="links">
+            <MediaLinks openNav={openNav}></MediaLinks>
+          </div>
+        )}
+        <div className="menu-mobile">
+          <MobileNav
+            handleOpenNav={handleOpenNav}
+            openNav={openNav}
+          ></MobileNav>
+        </div>
+      </header>
+    </section>
+  );
+}
+
+function MobileNav({ openNav, handleOpenNav }) {
+  return (
+    <div className="btn-nav" onClick={handleOpenNav}>
+      {openNav ? (
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      ) : (
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+      )}
+    </div>
   );
 }
 
@@ -164,15 +199,15 @@ function SectionAbout() {
             use. I'm dedicated to delivering high-quality work and always eager
             to learn new technologies.
           </p>
+          <Button className={"btn"}>Let's begin</Button>
+          <h2 className="section-project-title">Projects</h2>
         </div>
-        <Button className={"btn"}>Let's begin</Button>
-        <h2 className="section-project-title">Projects</h2>
-        <img
-          src={require("./img/drawing.png")}
-          alt="drawing"
-          className="drawing"
-        />
       </div>
+      <img
+        src={require("./img/drawing.png")}
+        alt="drawing"
+        className="drawing"
+      />
     </section>
   );
 }
@@ -202,28 +237,40 @@ function SectionProjects() {
           title={"Домашня кондитерська"}
           btnTitle={"Look it up"}
           link={"https://www.domkondyterska.com.ua/"}
+          text={
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolorsit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          }
         />
         <ProjectContainer
           img={require("./img/mapty.png")}
           title={"Mapty"}
           btnTitle={"Soon"}
+          text={
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+          }
         />
         <ProjectContainer
           img={require("./img/smartspace.png")}
           title={"Smartspace"}
           btnTitle={"Soon"}
+          text={
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+          }
         />
         <ProjectContainer
           img={require("./img/bankist.png")}
           title={"Bankist"}
           btnTitle={"Soon"}
+          text={
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+          }
         />
       </div>
     </section>
   );
 }
 
-function ProjectContainer({ img, title, btnTitle, link }) {
+function ProjectContainer({ img, title, btnTitle, link, text }) {
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
@@ -236,17 +283,20 @@ function ProjectContainer({ img, title, btnTitle, link }) {
       <div className="project-img-container">
         <img src={img} alt="Project 1" className="project-img" />
       </div>
-      <h3 className="project-title">
-        <span>{title}</span>
-      </h3>
-      <hr className="under-line" />
-      <p className="project-description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-      <Button className={"btn-open"} link={link}>
-        {btnTitle}
-      </Button>
+      <div className="project-title-container">
+        <h3 className="project-title">
+          <span>{title}</span>
+        </h3>
+        <hr className="under-line" />
+      </div>
+      <div className="project-text-container">
+        <p className="project-description">{text}</p>
+      </div>
+      <div className="project-btn">
+        <Button className={"btn-open"} link={link}>
+          {btnTitle}
+        </Button>
+      </div>
     </div>
   );
 }
@@ -344,31 +394,39 @@ function SectionAboutMe() {
       className={`${"section-about-me"} ${inView ? "" : "section--hidden"}`}
       id="#section--3"
     >
-      <h2 className="about-me-section-title">About me</h2>
-
-      <div className="timeline-img">
-        <div className="container-timeline">
-          <div className="rectangle"></div>
-
-          <div className="circle circle1">
-            <div className="circle-year">2021</div>
-            <div className="circle-text">Lorem Ipsum</div>
-          </div>
-
-          <div className="circle circle2">
-            <div className="circle-year">2022</div>
-            <div className="circle-text">Lorem Ipsum</div>
-          </div>
-
-          <div className="circle circle3">
-            <div className="circle-year">2023</div>
-            <div className="circle-text">Lorem Ipsum</div>
-          </div>
-
-          <div className="circle circle4">
-            <div className="circle-year">2024</div>
-
-            <div className="circle-text">Lorem Ipsum</div>
+      <div className="about-me">
+        <h2 className="about-me-title">About me</h2>
+        <div className="about-me-timeline">
+          <div className="container-timeline">
+            <div className="rectangle">&nbsp;</div>
+            <div className="circle circle1">
+              <span className="year">2021</span>
+              <div className="text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </div>
+            <div className="circle circle2">
+              <span className="year">2022</span>
+              <div className="text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </div>
+            <div className="circle circle3">
+              <span className="year">2023</span>
+              <div className="text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </div>
+            <div className="circle circle4">
+              <span className="year">2024</span>
+              <div className="text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -378,21 +436,27 @@ function SectionAboutMe() {
 
 function Footer() {
   return (
-    <section className="footer">
-      <div className="telegram-link">
-        <p>Write me:</p>
-        <a href="https://t.me/runpy21" target="__blank" className="telegram">
-          @runpy21
-        </a>
-      </div>
-      <div className="telegram-link">
-        <p>Email:</p>
-        <a href="https://t.me/runpy21" target="__blank" className="gmail">
-          devxander21@gmail.com
-        </a>
-      </div>
+    <section className="section-footer">
+      <footer className="footer">
+        <div className="contacts-link">
+          <p>Write me:&nbsp;</p>
+          <a href="https://t.me/runpy21" target="__blank" className="telegram">
+            @runpy21
+          </a>
+        </div>
+        <div className="contacts-link">
+          <p>Email:&nbsp;</p>
+          <a
+            href="mailto:devxander21@gmail.com"
+            target="__blank"
+            className="gmail"
+          >
+            devxander21@gmail.com
+          </a>
+        </div>
 
-      <MediaLinksBlock className={"media-links-footer"}></MediaLinksBlock>
+        <MediaLinksBlock className={"media-links-footer"}></MediaLinksBlock>
+      </footer>
     </section>
   );
 }
