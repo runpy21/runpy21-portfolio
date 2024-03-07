@@ -1,65 +1,3 @@
-/* @media (max-width: 117em) {
-  .project-container {
-    max-width: 45rem;
-    max-height: 70rem;
-  }
-  .projects {
-    margin: 0 20rem;
-    grid-template-columns: repeat(auto-fill, minmax(40rem, 45rem));
-  }
-}
-@media (max-width: 92.5em) {
-  html {
-    font-size: 55%;
-  }
-  h1,
-  h2 {
-    font-weight: 600;
-    font-size: 5.2rem;
-    padding-bottom: 3.4rem;
-  }
-  .about-description {
-    font-size: 3rem;
-  }
-  .header {
-    padding-left: 14rem;
-    padding-right: 10rem;
-    font-size: 2.4rem;
-  }
-  .logo-text {
-    margin-right: 16rem;
-  }
-  .about {
-    margin-left: 14rem;
-  }
-  .section-projects {
-    margin-bottom: 20rem;
-  }
-  .projects {
-    margin: 0 24rem;
-  }
-  .project-container {
-    max-width: 45rem;
-    max-height: 70rem;
-  }
-  .projects {
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 45rem));
-  }
-
-  .technologie {
-    margin-left: 14rem;
-  }
-  .section-technologie-title {
-    margin-bottom: 13.3rem;
-  }
-}
-@media (max-width: 75em) {
-  html {
-    font-size: 50%;
-  }
-}
-@media (max-width: 68em) {
-} */
 @media (max-width: 118.75em) {
   .circle4 {
     top: 0;
@@ -118,6 +56,9 @@
   .additional-skills {
     font-size: 3rem;
   }
+  .additional {
+    padding: 0 10.2rem;
+  }
   .bar-technologie-title {
     font-size: 3rem;
   }
@@ -131,6 +72,10 @@
     font-size: 2.2rem;
     min-width: 22rem;
   }
+  .about-me {
+    padding: 0 10.2rem;
+  }
+
   .footer {
     padding: 0 18rem;
   }
@@ -225,6 +170,9 @@
     font-size: 2rem;
     min-width: 16rem;
   }
+  .additional-skills {
+    font-size: 2.2rem;
+  }
 }
 @media (max-width: 30em) {
   html {
@@ -290,10 +238,10 @@
     margin-bottom: 10rem;
   }
   .additional-skills {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
-  .additional-skills-container {
-    margin: 0 4rem;
+  .additional {
+    padding: 0 6rem;
   }
   .about-me {
     padding: 0 6rem;

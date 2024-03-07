@@ -81,13 +81,25 @@ function NavBar() {
     const section = document.getElementById(sectionId);
 
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const headerHeight = document.querySelector(".header").clientHeight;
+      const translateYValue = 8 * 10;
+      const scrollPosition = section.offsetTop - headerHeight - translateYValue;
+
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: "smooth",
+      });
     }
   };
+
   function handleOpenNav() {
     setNavIsOpen(!openNav);
   }
-
+  const handleClick = () => {
+    if (window.innerWidth <= 768) {
+      handleOpenNav();
+    }
+  };
   return (
     <section className="section-header">
       <header className="header">
@@ -97,29 +109,29 @@ function NavBar() {
 
         <div className={`${openNav ? "nav-mobile" : "nav"}`}>
           <ul className="nav-links">
-            <li className="nav-item" onClick={handleOpenNav}>
+            <li className="nav-item" onClick={handleClick}>
               <a
                 className="nav-link"
-                href="#section--1"
-                onClick={() => scrollToSection("#section--1")}
+                href="#projects"
+                onClick={() => scrollToSection("#projects")}
               >
                 Projects
               </a>
             </li>
-            <li className="nav-item" onClick={handleOpenNav}>
+            <li className="nav-item" onClick={handleClick}>
               <a
                 className="nav-link"
-                href="#section--2"
-                onClick={() => scrollToSection("#section--2")}
+                href="#technologies"
+                onClick={() => scrollToSection("#technologies")}
               >
                 Technologies
               </a>
             </li>
-            <li className="nav-item" onClick={handleOpenNav}>
+            <li className="nav-item" onClick={handleClick}>
               <a
                 className="nav-link"
-                href="#section--3"
-                onClick={() => scrollToSection("#section--3")}
+                href="#about-me"
+                onClick={() => scrollToSection("#about-me")}
               >
                 About me
               </a>
@@ -199,7 +211,9 @@ function SectionAbout() {
             use. I'm dedicated to delivering high-quality work and always eager
             to learn new technologies.
           </p>
-          <Button className={"btn"}>Let's begin</Button>
+          <Button className={"btn"} link={"https://t.me/runpy21"}>
+            Let's begin
+          </Button>
           <h2 className="section-project-title">Projects</h2>
         </div>
       </div>
@@ -229,7 +243,7 @@ function SectionProjects() {
     <section
       className={`${"section-projects"} ${inView ? "" : "section--hidden"}`}
       ref={ref}
-      id="#section--1"
+      id="#projects"
     >
       <div className="projects">
         <ProjectContainer
@@ -311,7 +325,7 @@ function SectionTechnologies() {
     <section
       ref={ref}
       className={`${"section-technologie"} ${inView ? "" : "section--hidden"}`}
-      id="#section--2"
+      id="#technologies"
     >
       <div className="technologie">
         <h2 className="section-technologie-title">Technologies</h2>
@@ -364,16 +378,16 @@ function SectionAdditional() {
       <div className="additional">
         <h2 className="additional-title">Additional technologies and skills</h2>
         <div className="additional-skills-container">
-          <ul className="additional-skills">
+          <ul className="additional-skills flex-start">
             <li>Git</li>
             <li>Quick learning</li>
             <li>Agile</li>
           </ul>
-          <ul className="additional-skills">
+          <ul className="additional-skills flex-center">
             <li>Wordpress</li>
             <li>Engagement</li>
           </ul>
-          <ul className="additional-skills">
+          <ul className="additional-skills flex-end">
             <li>Teamwork</li>
             <li>B2 english</li>
           </ul>
@@ -392,7 +406,7 @@ function SectionAboutMe() {
     <section
       ref={ref}
       className={`${"section-about-me"} ${inView ? "" : "section--hidden"}`}
-      id="#section--3"
+      id="#about-me"
     >
       <div className="about-me">
         <h2 className="about-me-title">About me</h2>
