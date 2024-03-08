@@ -1,5 +1,3 @@
-import "./css/style.css";
-import "./css/queries.css";
 import Header from "./ui/Header";
 import Footer from "./ui/Footer";
 import SectionAbout from "./features/SectionAbout";

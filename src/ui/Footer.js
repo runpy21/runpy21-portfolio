@@ -20,7 +20,9 @@ function Footer() {
             devxander21@gmail.com
           </a>
         </div>
-        <MediaLinks className={"media-links-footer"}></MediaLinks>
+        <div className="media-links-footer">
+          <MediaLinks></MediaLinks>
+        </div>
       </footer>
     </section>
   );

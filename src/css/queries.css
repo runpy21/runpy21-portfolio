@@ -108,12 +108,16 @@
   html {
     font-size: 30%;
   }
+  .menu-mobile {
+    display: block;
+  }
   .links {
     display: none;
   }
   .nav-links {
     display: none;
   }
+
   .no-scroll {
     overflow: hidden;
   }
