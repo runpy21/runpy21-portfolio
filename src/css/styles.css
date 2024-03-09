@@ -217,6 +217,7 @@ p {
   transform: scale(1.1);
 }
 .project-title {
+  text-transform: uppercase;
   text-align: center;
   margin: 0 2.5rem 2.5rem;
 }

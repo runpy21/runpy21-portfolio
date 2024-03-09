@@ -18,7 +18,7 @@ function ProjectContainer({ img, title, btnTitle, link, text }) {
         <h3 className="project-title fz-3-6">
           <span>{title}</span>
         </h3>
-        <hr className="under-line" />
+        <div className="under-line"></div>
       </div>
       <div className="project-text-container">
         <p className="project-description">{text}</p>
