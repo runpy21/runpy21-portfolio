@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/runpy21-portfolio/static/css/main.f5a7f74d.css",
-    "main.js": "/runpy21-portfolio/static/js/main.93e06d7b.js",
-    "static/media/smartspace.png": "/runpy21-portfolio/static/media/smartspace.ac433967f9c7e5d743f5.png",
+    "main.js": "/runpy21-portfolio/static/js/main.c6103e69.js",
     "static/media/1920x1080domkondyterska.png": "/runpy21-portfolio/static/media/1920x1080domkondyterska.2b8b31f0bb3b4664aa1f.png",
     "static/media/bankist.png": "/runpy21-portfolio/static/media/bankist.ca8137a1a186b791ee45.png",
-    "static/media/mapty.jpg": "/runpy21-portfolio/static/media/mapty.a8da9b58c7cfe907c7a5.jpg",
+    "static/media/mapty.webp": "/runpy21-portfolio/static/media/mapty.eaaedfe89df424de5ee1.webp",
+    "static/media/smartspace.webp": "/runpy21-portfolio/static/media/smartspace.5df3aa5c336b78b6208c.webp",
     "static/media/drawing.png": "/runpy21-portfolio/static/media/drawing.bc80e3c8e2a37b6b46fc.png",
     "static/media/Figma.svg": "/runpy21-portfolio/static/media/Figma.9750a24ca2f33cde5192bccc8b5c386b.svg",
     "static/media/mark-github-24.svg": "/runpy21-portfolio/static/media/mark-github-24.9990eeac492a2868c30606986dbb9768.svg",
     "static/media/Linkedin.svg": "/runpy21-portfolio/static/media/Linkedin.ad8340e61ec5b0241e58e8bfa8e3b89b.svg",
     "index.html": "/runpy21-portfolio/index.html",
     "main.f5a7f74d.css.map": "/runpy21-portfolio/static/css/main.f5a7f74d.css.map",
-    "main.93e06d7b.js.map": "/runpy21-portfolio/static/js/main.93e06d7b.js.map"
+    "main.c6103e69.js.map": "/runpy21-portfolio/static/js/main.c6103e69.js.map"
   },
   "entrypoints": [
     "static/css/main.f5a7f74d.css",
-    "static/js/main.93e06d7b.js"
+    "static/js/main.c6103e69.js"
   ]
 }
