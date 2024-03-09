@@ -103,6 +103,7 @@ function SectionTimeLine() {
               teams to make a meaningful difference.
             </div>
           </div>
+          <div className="space">&nbsp;</div>
         </div>
       </div>
     </section>

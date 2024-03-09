@@ -177,15 +177,13 @@
     pointer-events: none;
   }
   .text-mobile.active {
-    display: flex;
+    display: block;
     top: 2.5rem;
-    font-size: 2.8rem;
-    text-align: center;
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
-    max-width: 34rem;
-    transition: opacity 1s;
+    max-width: 34.7rem;
+    transition: all 1s;
   }
   .container-timeline {
     position: relative;
@@ -197,6 +195,7 @@
       linear-gradient(290deg, #13adc7 0%, #6978d1 66.67%, #945dd6 100%) border-box;
     border-radius: 50%;
     border: 0.6rem solid transparent;
+    backdrop-filter: blur(0.9rem);
   }
 }
 @media (max-width: 30em) {
