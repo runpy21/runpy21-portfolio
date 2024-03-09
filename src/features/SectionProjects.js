@@ -14,7 +14,7 @@ function SectionProjects() {
     >
       <div className="projects">
         <ProjectContainer
-          img={require("../img/domkon.png")}
+          img={require("../img/1920x1080domkondyterska.png")}
           title={"Домашня кондитерська"}
           btnTitle={"Look it up"}
           link={"https://www.domkondyterska.com.ua/"}
@@ -23,8 +23,8 @@ function SectionProjects() {
           }
         />
         <ProjectContainer
-          img={require("../img/mapty.png")}
-          title={"Mapty"}
+          img={require("../img/bankist.png")}
+          title={"bankist"}
           btnTitle={"Soon"}
           text={
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
@@ -39,8 +39,8 @@ function SectionProjects() {
           }
         />
         <ProjectContainer
-          img={require("../img/bankist.png")}
-          title={"Bankist"}
+          img={require("../img/mapty.jpg")}
+          title={"mapty"}
           btnTitle={"Soon"}
           text={
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
