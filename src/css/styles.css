@@ -29,6 +29,26 @@ p {
   color: #bcbcbc;
   font-weight: 600;
 }
+@keyframes fillAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--techPercentage);
+  }
+}
+.container {
+  margin: 0 auto;
+  padding: 0 19.2rem;
+  max-width: 192rem;
+}
+.item {
+  padding: 0 10.8rem;
+}
+.fz-3-6 {
+  font-size: 3.6rem;
+  font-weight: 600;
+}
 
 /* NAV SECTION */
 .menu-mobile {
@@ -45,6 +65,8 @@ p {
   display: flex;
   align-items: center;
   padding: 0 13rem;
+  font-size: 3rem;
+  font-weight: 500;
   z-index: 999;
   background-color: #0f1624;
   justify-content: space-between;
@@ -54,10 +76,10 @@ p {
 }
 
 .main-logo {
-  font-size: 3rem;
-  font-weight: 500;
   background-image: var(--gradient-primary);
   text-decoration: none;
+  font-size: 3rem;
+  font-weight: 500;
   padding: 0;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -66,7 +88,6 @@ p {
   display: flex;
   list-style: none;
   gap: 9.8rem;
-  font-size: 3rem;
 }
 .nav-link {
   text-decoration: none;
@@ -78,10 +99,6 @@ p {
 .media-links {
   display: flex;
   gap: 3rem;
-}
-.container {
-  display: flex;
-  flex-direction: column;
 }
 
 .container-grid {
@@ -106,17 +123,10 @@ p {
     transform 1s,
     opacity 1s;
 }
-.about {
-  margin: 0 auto;
-  padding: 0 19.2rem;
-  max-width: 192rem;
-}
 .about-description {
   padding-left: 6.2rem;
   line-height: 5.4rem;
   max-width: 98.9rem;
-  font-size: 3.6rem;
-  font-weight: 600;
 }
 .btn {
   width: 28rem;
@@ -131,7 +141,8 @@ p {
   cursor: pointer;
   transition: all 0.5s;
 }
-.btn:hover {
+.btn:hover,
+.btn.show:hover {
   background: var(--gradient-reverse);
 }
 .drawing {
@@ -167,18 +178,10 @@ p {
   display: grid;
   row-gap: 9.7rem;
   column-gap: 22rem;
-  padding: 0 30rem;
   max-width: 192rem;
   margin: 0 auto;
+  padding: 0 30rem;
   grid-template-columns: repeat(2, 1fr);
-}
-.icon-mobile-nav {
-  position: absolute;
-  visibility: hidden;
-  pointer-events: none;
-  opacity: 0;
-  height: 7.2rem;
-  width: 7.2rem;
 }
 .project-container {
   display: flex;
@@ -192,10 +195,8 @@ p {
     transform 1s,
     opacity 1s;
 }
-
 .project-img-container {
   border-radius: 0.8rem;
-
   margin: 2.5rem;
   overflow: hidden;
   transition: 0.3s;
@@ -216,41 +217,26 @@ p {
   transform: scale(1.1);
 }
 .project-title {
-  font-size: 3.6rem;
   text-align: center;
-  margin: 0 0 2.5rem 0;
+  margin: 0 2.5rem 2.5rem;
 }
-
 .under-line {
-  margin: 0 auto 25px;
+  margin: 0 auto 2.5rem;
   border: none;
   border-radius: 8.3px;
   max-width: 30rem;
   height: 0.4rem;
   background: var(--gradient-primary);
 }
-
 .project-description {
   font-size: 2.8rem;
   margin: 0 2.5rem 2.5rem;
 }
-
-.btn-open {
+.btn.show {
   width: 20rem;
   height: 6rem;
   margin: 0 0 4.5rem 2.5rem;
-  border: none;
-  border-radius: 83px;
-  font-weight: 600;
   font-size: 2rem;
-  color: #fff;
-  background-image: var(--gradient-primary);
-  cursor: pointer;
-  transition: all 0.5s;
-}
-
-.btn-open:hover {
-  background: var(--gradient-reverse);
 }
 .project-btn {
   margin-top: auto;
@@ -265,18 +251,11 @@ p {
     transform 1s,
     opacity 1s;
 }
-.technologie {
-  max-width: 192rem;
-  padding: 0 19.2rem;
-  margin: 0 auto;
-}
 
 .section-technologie-title {
   margin-bottom: 13.3rem;
 }
-.section-technologie-bars {
-  margin: 0 10.8rem;
-}
+
 .technologie-bar-container {
   max-width: 132rem;
 }
@@ -290,7 +269,6 @@ p {
   color: #fff;
 }
 .bar-technologie-title {
-  font-size: 3.6rem;
   padding-left: 2.5rem;
 }
 .bar-lvl-title {
@@ -305,14 +283,6 @@ p {
   margin-bottom: 5.5rem;
 }
 
-@keyframes fillAnimation {
-  from {
-    width: 0;
-  }
-  to {
-    width: var(--techPercentage);
-  }
-}
 .progress-bar-animated {
   border-radius: 83px;
   height: 3.2rem;
@@ -330,11 +300,7 @@ p {
     transform 1s,
     opacity 1s;
 }
-.additional {
-  margin: 0 auto;
-  padding: 0 19.2rem;
-  max-width: 192rem;
-}
+
 .additional-title {
   padding: 0;
   font-size: 4.8rem;
@@ -346,11 +312,9 @@ p {
   list-style-position: inside;
   flex-direction: column;
   row-gap: 3.2rem;
-  font-size: 3.6rem;
 }
 .additional-skills-container {
   display: flex;
-  padding: 0 10.8rem;
   max-width: 153.6rem;
   justify-content: space-between;
 }
@@ -366,17 +330,8 @@ p {
   min-height: 3.2rem;
 }
 
-.about-me {
-  max-width: 192rem;
-  margin: 0 auto;
-  padding: 0 19.2rem;
-}
-.about-me-timeline {
-  padding: 0 10.8rem;
-}
 .section-about-me {
   font-weight: 600;
-  font-size: 6.4rem;
   margin-bottom: 42.1rem;
   transition:
     transform 1s,
@@ -387,17 +342,18 @@ p {
   top: 1rem;
   left: 1.5rem;
   max-width: 128.9rem;
-  width: 100%;
+  width: 98%;
   height: 1.2rem;
   background-color: white;
+  z-index: -2;
 }
-
 .circle {
   position: absolute;
   width: 3.2rem;
   height: 3.2rem;
   background-color: white;
   border-radius: 50%;
+  border: 0.6rem solid transparent;
 }
 .circle1 {
   top: 0;
@@ -417,7 +373,6 @@ p {
 }
 
 .year {
-  font-size: 3.6rem;
   text-align: center;
   position: absolute;
   bottom: 100%;
@@ -426,6 +381,7 @@ p {
   margin-bottom: 1rem;
   color: white;
 }
+
 .text {
   font-size: 2.8rem;
   text-align: center;
@@ -438,7 +394,19 @@ p {
   margin-top: 1rem;
   color: white;
 }
-
+.text-mobile {
+  display: none;
+  font-size: 2.8rem;
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 100%;
+  min-width: 34.7rem;
+  transform: translateX(-50%);
+  margin-top: 1rem;
+  color: white;
+}
 /**************************/
 /* SECTION FOOTER*/
 /**************************/

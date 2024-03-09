@@ -1,8 +1,5 @@
+/* width 1694px */
 @media (max-width: 118.75em) {
-  .circle4 {
-    top: 0;
-    left: 100%;
-  }
 }
 @media (max-width: 101em) {
   html {
@@ -16,68 +13,58 @@
   }
   .projects {
     column-gap: 14rem;
+    padding: 0 21.8rem;
+  }
+  .text {
+    min-width: 24rem;
+  }
+  .fz-3-6 {
+    font-size: 3.2rem;
+  }
+  .main-logo {
+    font-size: 3.2rem;
+  }
+  .section-projects {
+    margin-bottom: 20rem;
+  }
+  .additional-title {
+    font-size: 3.6rem;
+  }
+  .container {
+    padding: 0 11rem;
   }
 }
+/* width 1200px */
 @media (max-width: 75em) {
   html {
     font-size: 43.25%;
   }
   h1,
   h2 {
-    font-size: 3.6rem;
+    font-size: 5.2rem;
   }
   .header {
     padding: 0 8rem;
-  }
-  .about-description {
     font-size: 3.2rem;
+    font-weight: 500;
   }
-  .project-title {
-    font-size: 3rem;
-  }
-  .project-description {
-    font-size: 2.4rem;
-  }
-  .section-projects {
-    margin-bottom: 20rem;
-  }
-  .additional-title {
-    font-size: 2.4rem;
-  }
-  .projects {
-    padding: 0 20rem;
-  }
-  .about {
-    padding: 0 10.2rem;
-  }
-  .technologie {
-    padding: 0 10.2rem;
+
+  .bar-lvl-title {
+    font-size: 2.8rem;
   }
   .additional-skills {
     font-size: 3rem;
   }
-  .additional {
-    padding: 0 10.2rem;
-  }
-  .bar-technologie-title {
-    font-size: 3rem;
-  }
-  .bar-lvl-title {
-    font-size: 1.8rem;
-  }
+
   .year {
     font-size: 3rem;
   }
   .text {
     font-size: 2.2rem;
-    min-width: 22rem;
+    min-width: 20rem;
   }
-  .about-me {
-    padding: 0 10.2rem;
-  }
-
   .footer {
-    padding: 0 18rem;
+    padding: 0 19.2rem;
   }
   .section-additional {
     margin-bottom: 20rem;
@@ -88,7 +75,7 @@
     font-size: 36.5%;
   }
   .projects {
-    column-gap: 14rem;
+    column-gap: 9rem;
   }
   .footer {
     grid-template-columns: 1fr;
@@ -105,9 +92,6 @@
   }
 }
 @media (max-width: 48em) {
-  html {
-    font-size: 30%;
-  }
   .menu-mobile {
     display: block;
   }
@@ -117,32 +101,28 @@
   .nav-links {
     display: none;
   }
-
   .no-scroll {
     overflow: hidden;
   }
   .icon-mobile-nav {
     position: relative;
-    visibility: visible;
-    pointer-events: auto;
-    opacity: 1;
     height: 7.2rem;
     width: 7.2rem;
     z-index: 1000;
   }
+
   .nav-mobile .nav-links {
     display: flex;
     flex-direction: column;
     position: absolute;
     align-items: center;
-    font-size: 24px;
+    font-size: 6.4rem;
   }
   .projects {
     grid-template-columns: 1fr;
   }
   .nav-mobile {
     display: flex;
-    position: relative;
     background-color: rgba(15, 22, 36, 0.466);
     backdrop-filter: blur(5px);
     inset: 0;
@@ -163,94 +143,94 @@
   .main-logo {
     z-index: 1000;
   }
-
-  .about-me-timeline {
-    padding: 0 6rem;
-  }
   .year {
     font-size: 3.6rem;
   }
-  .text {
-    font-size: 2rem;
-    min-width: 16rem;
-  }
-  .additional-skills {
-    font-size: 2.2rem;
-  }
-}
-@media (max-width: 30em) {
-  html {
-    font-size: 23.75%;
-  }
-  .header {
-    padding: 0 6rem;
-  }
 
-  .about-description {
-    font-size: 3rem;
+  .additional-skills {
+    font-size: 2.1rem;
   }
-  .project-title {
+  .fz-3-6 {
     font-size: 2.4rem;
   }
-  .project-description {
-    font-size: 2rem;
+  .main-logo {
+    font-size: 3.8rem;
   }
   .section-projects {
-    margin-bottom: 10rem;
+    margin-bottom: 20rem;
   }
   .additional-title {
-    font-size: 2.2rem;
+    font-size: 3.6rem;
   }
-  .projects {
-    padding: 0 12rem;
-  }
-  .about {
+  .container {
     padding: 0 6rem;
-  }
-  .technologie {
-    padding: 0 6rem;
-  }
-  .additional-skills {
-    font-size: 3rem;
-  }
-  .bar-technologie-title {
-    font-size: 2.2rem;
-  }
-  .section-technologie-bars {
-    margin: 0 6rem;
-  }
-  .section-technologie-title {
-    margin-bottom: 4rem;
   }
   .bar-lvl-title {
     font-size: 1.2rem;
   }
-  .year {
-    font-size: 2.4rem;
-  }
   .text {
-    font-size: 1.6rem;
-    min-width: 14rem;
+    display: none;
+  }
+  .text-mobile {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .text-mobile.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    max-width: 34rem;
+    transition: opacity 1s;
+  }
+  .container-timeline {
+    position: relative;
+  }
+  .text-mobile.active {
+    display: flex;
+    font-size: 2.8rem;
+    text-align: center;
+  }
+  .circle.circle-active {
+    background:
+      linear-gradient(white, white) padding-box,
+      linear-gradient(290deg, #13adc7 0%, #6978d1 66.67%, #945dd6 100%) border-box;
+    border-radius: 50%;
+    border: 0.6rem solid transparent;
+  }
+}
+@media (max-width: 30em) {
+  html {
+    font-size: 30%;
+  }
+  .header {
+    padding: 0 4rem;
   }
   .footer {
-    padding: 0 10rem;
+    padding: 0 4rem;
   }
-  .additional {
-    padding: 0 12rem;
+  .container {
+    padding: 0 6rem;
   }
-  .section-additional {
-    margin-bottom: 10rem;
+  .item {
+    padding: 0 5.4rem;
+  }
+  .projects {
+    padding: 0 11.4rem;
+  }
+  .under-line {
+    max-width: 20rem;
   }
   .additional-skills {
-    font-size: 1.8rem;
+    font-size: 3.4rem;
   }
-  .additional {
-    padding: 0 6rem;
+  .additional-skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
   }
-  .about-me {
-    padding: 0 6rem;
-  }
-  .about-me-timeline {
-    padding: 0 6rem;
+  .text-mobile.active {
+    min-width: 22rem;
+    font-size: 2.8rem;
   }
 }

@@ -14,9 +14,9 @@ function SectionTechnologies() {
       className={`${"section-technologie"} ${inView ? "" : "section--hidden"}`}
       id="#technologies"
     >
-      <div className="technologie">
+      <div className="container technologie">
         <h2 className="section-technologie-title">Technologies</h2>
-        <div className="section-technologie-bars">
+        <div className="section-technologie-bars item">
           {techData.map((el) => (
             <TechnologiesBar techObj={el} key={el.technology}></TechnologiesBar>
           ))}

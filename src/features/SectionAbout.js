@@ -10,10 +10,10 @@ function SectionAbout() {
       ref={ref}
       className={`${"section-about"} ${inView ? "" : "section--hidden"}`}
     >
-      <div className="about">
+      <div className="container about">
         <div className="about-text">
           <h1>Oleksandr Dmytruk</h1>
-          <p className="about-description">
+          <p className="about-description fz-3-6">
             Frontend Developer focused on making websites look great and easy to
             use. I'm dedicated to delivering high-quality work and always eager
             to learn new technologies.

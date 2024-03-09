@@ -10,9 +10,9 @@ function SectionAdditional() {
       ref={ref}
       className={`${"section-additional"} ${inView ? "" : "section--hidden"}`}
     >
-      <div className="additional">
+      <div className="container additional">
         <h2 className="additional-title">Additional technologies and skills</h2>
-        <div className="additional-skills-container">
+        <div className="additional-skills-container item fz-3-6 ">
           <ul className="additional-skills flex-start">
             <li>Git</li>
             <li>Quick learning</li>
