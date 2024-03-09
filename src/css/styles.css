@@ -96,6 +96,7 @@ p {
   display: flex;
   list-style: none;
   gap: 9.8rem;
+  animation: fade-in 1.2s;
 }
 .nav-link {
   text-decoration: none;
@@ -402,7 +403,6 @@ p {
   width: 100%;
   min-width: 34.7rem;
   transform: translateX(-50%);
-  margin-top: 1rem;
   color: white;
 }
 .text-mobile {
@@ -418,9 +418,9 @@ p {
   top: 100%;
   left: 50%;
   width: 100%;
-  min-width: 34.7rem;
+  min-width: 36rem;
   transform: translateX(-50%);
-  padding-top: 1rem;
+  padding-top: 2rem;
   color: white;
   animation: fade-in 1.2s;
 }
