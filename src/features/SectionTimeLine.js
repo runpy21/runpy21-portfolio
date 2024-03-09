@@ -28,13 +28,10 @@ function SectionTimeLine() {
               }`}
               onClick={() => handleCircleClick(2021)}
             >
+              &nbsp;
               <span className="year fz-3-6">2021</span>
-              <div className="text">
-                Completed my college education and smoothly moved into
-                university life. Excited to delve into fresh academic
-                challenges, expanding my knowledge in Computer Engineering
-              </div>
             </div>
+
             <div
               className={`text-mobile ${activeYear === 2021 ? "active" : ""}`}
             >
@@ -49,12 +46,8 @@ function SectionTimeLine() {
               onClick={() => handleCircleClick(2022)}
             >
               <span className="year fz-3-6">2022</span>
-              <div className="text">
-                Successfully navigated university life, embracing a challenging
-                academic curriculum in Computer Engineering. Explored topics
-                such as digital systems, algorithms, and hardware design.
-              </div>
             </div>
+
             <div
               className={`text-mobile ${activeYear === 2022 ? "active" : ""}`}
             >
@@ -70,12 +63,8 @@ function SectionTimeLine() {
               onClick={() => handleCircleClick(2023)}
             >
               <span className="year fz-3-6">2023</span>
-              <div className="text">
-                Started working as a full-stack developer at VALIWO. Created
-                cool solutions and helped projects succeed by using my skills in
-                software development.
-              </div>
             </div>
+
             <div
               className={`text-mobile ${activeYear === 2023 ? "active" : ""}`}
             >
@@ -91,11 +80,8 @@ function SectionTimeLine() {
               onClick={() => handleCircleClick(2024)}
             >
               <span className="year fz-3-6">2024</span>
-              <div className="text">
-                Ready to join interesting projects and collaborate with
-                motivated teams to make a meaningful difference.
-              </div>
             </div>
+
             <div
               className={`text-mobile ${activeYear === 2024 ? "active" : ""}`}
             >
@@ -103,8 +89,28 @@ function SectionTimeLine() {
               teams to make a meaningful difference.
             </div>
           </div>
-          <div className="space">&nbsp;</div>
         </div>
+      </div>
+      <div className="text">
+        <p className="description">
+          Completed my college education and smoothly moved into university
+          life. Excited to delve into fresh academic challenges, expanding my
+          knowledge in Computer Engineering
+        </p>
+        <p className="description">
+          Successfully navigated university life, embracing a challenging
+          academic curriculum in Computer Engineering. Explored topics such as
+          digital systems, algorithms, and hardware design.
+        </p>
+        <p className="description">
+          Started working as a full-stack developer at VALIWO. Created cool
+          solutions and helped projects succeed by using my skills in software
+          development.
+        </p>
+        <p className="description">
+          Ready to join interesting projects and collaborate with motivated
+          teams to make a meaningful difference.
+        </p>
       </div>
     </section>
   );
