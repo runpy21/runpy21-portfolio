@@ -328,12 +328,11 @@ p {
   margin-top: 8.7rem;
   position: relative;
   max-width: 132rem;
-  min-height: 3.2rem;
+  min-height: 59.7rem;
 }
 
 .section-about-me {
   font-weight: 600;
-  margin-bottom: 42.1rem;
   transition:
     transform 1s,
     opacity 1s;

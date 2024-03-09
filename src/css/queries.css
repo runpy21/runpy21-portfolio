@@ -177,6 +177,10 @@
     pointer-events: none;
   }
   .text-mobile.active {
+    display: flex;
+    top: 2.5rem;
+    font-size: 2.8rem;
+    text-align: center;
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
@@ -186,11 +190,7 @@
   .container-timeline {
     position: relative;
   }
-  .text-mobile.active {
-    display: flex;
-    font-size: 2.8rem;
-    text-align: center;
-  }
+
   .circle.circle-active {
     background:
       linear-gradient(white, white) padding-box,
