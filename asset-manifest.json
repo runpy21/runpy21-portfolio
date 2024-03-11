@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/runpy21-portfolio/static/css/main.ed488c2a.css",
-    "main.js": "/runpy21-portfolio/static/js/main.63e0db9e.js",
+    "main.css": "/runpy21-portfolio/static/css/main.4f89c485.css",
+    "main.js": "/runpy21-portfolio/static/js/main.81c8e370.js",
     "static/media/1920x1080domkondyterska.png": "/runpy21-portfolio/static/media/1920x1080domkondyterska.2b8b31f0bb3b4664aa1f.png",
     "static/media/bankist.png": "/runpy21-portfolio/static/media/bankist.ca8137a1a186b791ee45.png",
     "static/media/mapty.webp": "/runpy21-portfolio/static/media/mapty.eaaedfe89df424de5ee1.webp",
@@ -11,11 +11,11 @@
     "static/media/mark-github-24.svg": "/runpy21-portfolio/static/media/mark-github-24.9990eeac492a2868c30606986dbb9768.svg",
     "static/media/Linkedin.svg": "/runpy21-portfolio/static/media/Linkedin.ad8340e61ec5b0241e58e8bfa8e3b89b.svg",
     "index.html": "/runpy21-portfolio/index.html",
-    "main.ed488c2a.css.map": "/runpy21-portfolio/static/css/main.ed488c2a.css.map",
-    "main.63e0db9e.js.map": "/runpy21-portfolio/static/js/main.63e0db9e.js.map"
+    "main.4f89c485.css.map": "/runpy21-portfolio/static/css/main.4f89c485.css.map",
+    "main.81c8e370.js.map": "/runpy21-portfolio/static/js/main.81c8e370.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed488c2a.css",
-    "static/js/main.63e0db9e.js"
+    "static/css/main.4f89c485.css",
+    "static/js/main.81c8e370.js"
   ]
 }
