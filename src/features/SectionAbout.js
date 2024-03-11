@@ -1,15 +1,22 @@
 import { useInView } from "react-intersection-observer";
 import Button from "../ui/Button";
+import { useEffect } from "react";
 
 function SectionAbout() {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
+  const { ref, inView, entry } = useInView({
+    threshold: 0,
+    root: null,
+    rootMargin: "-157px",
   });
+
+  useEffect(() => {
+    !inView
+      ? document.body.classList.add("sticky")
+      : document.body.classList.remove("sticky");
+  }, [inView]);
+
   return (
-    <section
-      ref={ref}
-      className={`${"section-about"} ${inView ? "" : "section--hidden"}`}
-    >
+    <section ref={ref} className={`${"section-about"} `}>
       <div className="container about">
         <div className="about-text">
           <h1>Oleksandr Dmytruk</h1>

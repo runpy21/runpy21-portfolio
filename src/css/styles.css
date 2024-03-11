@@ -62,13 +62,13 @@ p {
 .menu-mobile {
   display: none;
 }
-.section-header {
+.sticky .header {
   position: fixed;
   top: 0;
   z-index: 999;
   width: 100%;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
+
 .header {
   display: flex;
   align-items: center;
@@ -76,11 +76,12 @@ p {
   font-size: 3rem;
   font-weight: 500;
   z-index: 999;
-  background-color: #0f1624;
+  background-color: rgba(15, 22, 36, 0.95);
   justify-content: space-between;
   max-width: 192rem;
   height: 13.7rem;
   margin: 0 auto;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .main-logo {
@@ -125,11 +126,13 @@ p {
 /**************************/
 /* SECTION ABOUT */
 /**************************/
-
+.sticky .section-about {
+  margin-top: 29.4rem;
+}
 .section-about {
   position: relative;
   margin-bottom: 9.3rem;
-  margin-top: 29.4rem;
+  margin-top: 15.7rem;
   transition:
     transform 1s,
     opacity 1s;

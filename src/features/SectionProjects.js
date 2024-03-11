@@ -31,7 +31,7 @@ function SectionProjects() {
           }
         />
         <ProjectContainer
-          img={require("../img/smartspace.png")}
+          img={require("../img/smartspace.webp")}
           title={"Smartspace"}
           btnTitle={"Soon"}
           text={
@@ -39,7 +39,7 @@ function SectionProjects() {
           }
         />
         <ProjectContainer
-          img={require("../img/mapty.jpg")}
+          img={require("../img/mapty.webp")}
           title={"mapty"}
           btnTitle={"Soon"}
           text={
