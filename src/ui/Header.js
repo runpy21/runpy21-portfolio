@@ -33,6 +33,9 @@ function Header() {
   function handleOpenNav() {
     setNavIsOpen(!openNav);
   }
+  function handleOpenNavLogo() {
+    setNavIsOpen(false);
+  }
   const handleClick = () => {
     if (window.innerWidth <= 768) {
       handleOpenNav();
@@ -41,7 +44,7 @@ function Header() {
   return (
     <section className="section-header" id="#header">
       <header className="header">
-        <h1 className="main-logo">
+        <h1 className="main-logo" onClick={handleOpenNavLogo}>
           <a onClick={() => scrollToSection("#header")} href="#header">
             runpy21
           </a>
